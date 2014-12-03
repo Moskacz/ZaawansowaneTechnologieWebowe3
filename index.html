@@ -2,23 +2,35 @@
 <html>
 <head lang="en">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="Chart.js"></script>
     <script src="chartScripts.js"></script>
     <script>
         window.onload = function() {
-            var context = document.getElementById("chart").getContext("2d");
-            window.myLine = new Chart(context).Line(getChartData(), {responsive: true});
+            var chart = document.getElementById("chart");
+            var context = chart.getContext("2d");
+            window.myLine = new Chart(context).Line(getChartData(), {
+                responsive: false
+            });
+
+            chart.onclick = function(evt) {
+                didClickOnCanvas(chart, evt);
+            }
         }
+
     </script>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Meeting Adapter</title>
 </head>
 <body>
 <div id="header">
     <h1>Header</h1>
 </div>
 <div id="canvas">
-    <canvas id="chart" width="600" height="250"/>
+    <canvas id="chart" height="500" width="1300"></canvas>
+</div>
+<div id="result">
+    <h1>Results</h1>
 </div>
 </body>
 </html>

@@ -21,6 +21,18 @@ h1 {
 
 #canvas {
     width: 100%;
-    height: 600px;
+    height: 500px;
+    text-align: center;
     background-color: bisque;
+}
+
+.canvas {
+    width: 100%;
+    height: 500px;
+}
+
+#result {
+    width: 100%;
+    height: 75px;
+    background-color: white;
 }

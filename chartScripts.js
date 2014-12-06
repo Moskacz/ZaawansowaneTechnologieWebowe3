@@ -80,7 +80,8 @@ function didClickOnCanvas(canvas, event) {
     for (var i = 0; i < window.myLine.datasets[myChartIndex].points.length; i++) {
         points.push(window.myLine.datasets[myChartIndex].points[i].value);
     }
-    saveToDatabase(points)
+    saveToDatabase(points);
+    updateResults();
 }
 
 function chartPointForCanvasClickEvent(canvas, event) {
@@ -107,7 +108,30 @@ function saveToDatabase(points) {
 }
 
 function updateResults() {
-    
+    var companionNames = getCompanionNames();
+    var maxValue = 0;
+    var bestChoiceTimeIndex = 0;
+    for (var timeIndex = 0; timeIndex < 7; timeIndex++) {
+        var tmp = 0;
+        for (var chartIndex = 0; chartIndex < companionNames.length; chartIndex++) {
+            tmp += window.myLine.datasets[chartIndex].points[timeIndex].value;
+        }
+
+        if (tmp > maxValue) {
+            maxValue = tmp;
+            bestChoiceTimeIndex = timeIndex;
+        }
+        tmp = 0;
+    }
+
+    var resultDiv = document.getElementById('result');
+    while (resultDiv.firstChild) {
+        resultDiv.removeChild(resultDiv.firstChild);
+    }
+    var header = document.createElement('h1');
+    var textNode = document.createTextNode("Najlepszy termin na spotkanie to: " + getChartLabels()[bestChoiceTimeIndex]);
+    header.appendChild(textNode);
+    resultDiv.appendChild(header);
 }
 
 /* point class */

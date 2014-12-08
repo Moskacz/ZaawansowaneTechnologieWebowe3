@@ -43,7 +43,7 @@ function sendMail() {
 }
 
 function getMessageBodyForEmail($emailAddress) {
-    $link = "http://localhost:8888/comparator.php?userName=$emailAddress&page=0";
+    $link = "http://localhost:8888/index.html?username=$emailAddress";
     return "Witaj, \n Zostałeś zaproszony do ankiety, aby wziąć w niej udział wejdź w link: $link";
 }
 ?>
@@ -71,7 +71,7 @@ function getMessageBodyForEmail($emailAddress) {
     sendMail();
     ?>
     <br/>
-    <button class="cloud-button" onclick="location.href='index.php'">Back</button>
+    <button class="cloud-button" onclick="location.href='mailComposer.php'">Back</button>
 </div>
 
 </body>

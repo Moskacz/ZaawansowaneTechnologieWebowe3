@@ -41,6 +41,9 @@ function createSelectOptions() {
             ?>
         </select><br/>
 
+        <label for="meeting">Meeting Date : </label><input id="meeting" type="datetime" value="2011-01-13"/>
+
+
         <input type="submit" class="cloud-button" name="submit" value="Send mail"> <br/>
     </form>
 </div>

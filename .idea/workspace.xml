@@ -48,10 +48,10 @@
       <file leaf-file-name="mailComposer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mailComposer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6666666" vertical-offset="170" max-vertical-offset="810">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state vertical-scroll-proportion="-19.791666" vertical-offset="170" max-vertical-offset="855">
+              <caret line="43" column="86" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
               <folding>
-                <marker date="1418063155000" expanded="true" signature="259:311" placeholder="SELECT DISTI..mailing_lists..." />
+                <marker date="1418066411000" expanded="true" signature="259:311" placeholder="SELECT DISTI..mailing_lists..." />
               </folding>
             </state>
           </provider>
@@ -60,11 +60,11 @@
       <file leaf-file-name="sender.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sender.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5546875" vertical-offset="455" max-vertical-offset="1275">
-              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+            <state vertical-scroll-proportion="1.2421875" vertical-offset="225" max-vertical-offset="1275">
+              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
               <folding>
-                <marker date="1418063770000" expanded="true" signature="235:255" placeholder="SELECT * FRO..secret..." />
-                <marker date="1418063770000" expanded="true" signature="816:890" placeholder="SELECT email..mailing_lists..." />
+                <marker date="1418066942000" expanded="true" signature="235:255" placeholder="SELECT * FRO..secret..." />
+                <marker date="1418066942000" expanded="true" signature="816:890" placeholder="SELECT email..mailing_lists..." />
               </folding>
             </state>
           </provider>
@@ -656,21 +656,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mailComposer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6666666" vertical-offset="170" max-vertical-offset="810">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state vertical-scroll-proportion="-19.791666" vertical-offset="170" max-vertical-offset="855">
+          <caret line="43" column="86" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
           <folding>
-            <marker date="1418063155000" expanded="true" signature="259:311" placeholder="SELECT DISTI..mailing_lists..." />
+            <marker date="1418066411000" expanded="true" signature="259:311" placeholder="SELECT DISTI..mailing_lists..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sender.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5546875" vertical-offset="455" max-vertical-offset="1275">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        <state vertical-scroll-proportion="1.2421875" vertical-offset="225" max-vertical-offset="1275">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
           <folding>
-            <marker date="1418063770000" expanded="true" signature="235:255" placeholder="SELECT * FRO..secret..." />
-            <marker date="1418063770000" expanded="true" signature="816:890" placeholder="SELECT email..mailing_lists..." />
+            <marker date="1418066942000" expanded="true" signature="235:255" placeholder="SELECT * FRO..secret..." />
+            <marker date="1418066942000" expanded="true" signature="816:890" placeholder="SELECT email..mailing_lists..." />
           </folding>
         </state>
       </provider>

@@ -20,7 +20,16 @@ function createSelectOptions() {
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="datepicker/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="datepicker/css/datepicker.css">
     <link rel="stylesheet" type="text/css" href="adminStyle.css">
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script>
+        $(function() {
+            $('.datepicker').datepicker();
+        });
+    </script>
     <title>Wysyłanie maila</title>
 </head>
 <body>
@@ -41,8 +50,10 @@ function createSelectOptions() {
             ?>
         </select><br/>
 
-        <label for="meeting">Meeting Date : </label><input id="meeting" type="datetime" value="2011-01-13"/>
-
+        <label for="meeting_start">Meeting Start: </label>
+        <input class="datepicker" type="text">
+        <label for="meeting_end">Meeting End: </label>
+        <input class="datepicker" type="text">
 
         <input type="submit" class="cloud-button" name="submit" value="Send mail"> <br/>
     </form>

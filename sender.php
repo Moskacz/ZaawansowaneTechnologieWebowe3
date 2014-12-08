@@ -68,7 +68,7 @@ function getMessageBodyForEmail($emailAddress) {
     ?>
     <h1>Summary</h1>
     <?php
-    sendMail();
+        sendMail();
     ?>
     <br/>
     <button class="cloud-button" onclick="location.href='mailComposer.php'">Back</button>

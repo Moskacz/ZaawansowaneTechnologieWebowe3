@@ -1,0 +1,98 @@
+body {
+    font: 13px/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: lighter;
+    color: #404040;
+    background: #0ca3d2 url("background-mountains.jpg");
+}
+
+.form  {
+    padding: 20px 20px 20px;
+    background: whitesmoke;
+    border-radius: 3px;
+    border-width: 3px;
+    text-align: center;
+
+    position: absolute;
+    top:100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.form input {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 25px;
+    font-size: 15px;
+}
+
+.form select {
+    width: 100%;
+}
+
+.form textarea {
+    width: 100%;
+    height: 200px;
+    font-size: 15px;
+}
+
+.cloud-button {
+    text-align: center;
+    background: #ecf0f1;
+    border: 0;
+    box-shadow: inset 0 -2px #dadedf;
+    cursor: pointer;
+    color: #454545;
+    height: 25px;
+    font-size: 15px;
+}
+
+.cloud-button:hover {
+    background: #b5d1d2;
+}
+
+.product {
+    width: 100%;
+    background-color: wheat;
+    border-width: 3px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product textarea {
+    height: 100px;
+}
+
+#mail_div {
+    width: 500px;
+}
+
+#login_div {
+    width: 400px;;
+}
+
+#summary_div {
+    width: 400px;
+}
+
+#composer_div {
+    width: 600px;
+    float: left;
+}
+
+
+h1 {
+    margin: -15px -15px 15px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: lighter;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+}
+
+h2 {
+    font-size: 13px;
+    font-weight: lighter;
+}

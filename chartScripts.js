@@ -10,6 +10,11 @@ function getChartLabels() {
     return ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
 }
 
+function getStrokeColor(index) {
+    var colors = ["rgba(220, 0, 220, 1)", "rgba(23, 55, 210, 1)", "rgba(0, 204, 0, 1)"];
+    return colors[Math.floor(index % colors.length)];
+}
+
 function getChartValues(userName) {
     var parameters = {"userName" : userName};
     var chartValues;
@@ -40,8 +45,8 @@ function getChartData() {
 
         dataSets.push({
             label: name,
-            fillColor : "rgba(220,220,220,0.2)",
-            strokeColor : "rgba(220,0,220,1)",
+            fillColor : "rgba(220,220,220,0.5)",
+            strokeColor : getStrokeColor(i),
             pointColor : "rgba(220,220,220,1)",
             pointStrokeColor : "#fff",
             pointHighlightFill : "#fff",
@@ -69,6 +74,19 @@ function getCompanionNames() {
     return companionNames;
 }
 
+function createLegendLabels() {
+    var legendDiv = document.getElementById('legend');
+    var compationNames = getCompanionNames();
+
+    for (var i = 0; i < compationNames.length; i++) {
+        var headerNode = document.createElement('h2');
+        headerNode.style.color = getStrokeColor(i);
+        var textNode = document.createTextNode(compationNames[i]);
+        headerNode.appendChild(textNode);
+        legendDiv.appendChild(headerNode);
+    }
+}
+
 /* click events */
 
 function didClickOnCanvas(canvas, event) {
@@ -92,6 +110,7 @@ function chartPointForCanvasClickEvent(canvas, event) {
     var chartY = canvas.height - (event.clientY - canvas.offsetTop);
     chartY = chartY / canvas.height;
     chartY = chartY * getChartYMax();
+    chartY = Math.round(chartY);
     return new Point(chartX, chartY);
 }
 
@@ -113,15 +132,16 @@ function updateResults() {
     var bestChoiceTimeIndex = 0;
     for (var timeIndex = 0; timeIndex < 7; timeIndex++) {
         var tmp = 0;
+
         for (var chartIndex = 0; chartIndex < companionNames.length; chartIndex++) {
-            tmp += window.myLine.datasets[chartIndex].points[timeIndex].value;
+            tmp += parseFloat(window.myLine.datasets[chartIndex].points[timeIndex].value);
         }
+
 
         if (tmp > maxValue) {
             maxValue = tmp;
             bestChoiceTimeIndex = timeIndex;
         }
-        tmp = 0;
     }
 
     var resultDiv = document.getElementById('result');

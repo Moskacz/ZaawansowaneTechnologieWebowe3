@@ -1,5 +1,4 @@
 var myChartIndex = 0;
-var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
 function getUsername() {
     var userName = location.search.split('username=')[1];
@@ -7,7 +6,27 @@ function getUsername() {
 }
 
 function getChartLabels() {
-    return ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
+    var dates;
+    $.ajax({
+        type: 'POST',
+        url: 'datesProvider.php',
+        async: false,
+        success: function(result) {
+            dates = JSON.parse(result);
+        }
+    });
+
+    var labels = [];
+    for (var i = 0; i < dates.length; i++) {
+        var date = new Date(dates[i]);
+        labels.push(date.toDateString());
+    }
+
+    return labels;
+}
+
+function getDataCount() {
+    return getChartLabels().length;
 }
 
 function getStrokeColor(index) {
@@ -26,7 +45,9 @@ function getChartValues(userName) {
         success: function(result) {
             chartValues = JSON.parse(result);
             if (chartValues.length == 0) {
-                chartValues = [50,50,50,50,50,50,50];
+                for (var i = 0; i < getDataCount(); i++) {
+                    chartValues.push(50);
+                }
             }
         }
     });
@@ -105,12 +126,13 @@ function didClickOnCanvas(canvas, event) {
 function chartPointForCanvasClickEvent(canvas, event) {
     var chartX = event.clientX - canvas.offsetLeft;
     chartX = chartX / canvas.width;
-    chartX = chartX * 7;
+    chartX = chartX * getDataCount();
 
     var chartY = canvas.height - (event.clientY - canvas.offsetTop);
     chartY = chartY / canvas.height;
     chartY = chartY * getChartYMax();
     chartY = Math.round(chartY);
+
     return new Point(chartX, chartY);
 }
 
@@ -130,7 +152,7 @@ function updateResults() {
     var companionNames = getCompanionNames();
     var maxValue = 0;
     var bestChoiceTimeIndex = 0;
-    for (var timeIndex = 0; timeIndex < 7; timeIndex++) {
+    for (var timeIndex = 0; timeIndex < getDataCount(); timeIndex++) {
         var tmp = 0;
 
         for (var chartIndex = 0; chartIndex < companionNames.length; chartIndex++) {

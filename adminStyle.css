@@ -37,6 +37,11 @@ body {
     font-size: 15px;
 }
 
+.label {
+    font-weight: lighter;
+    color: red;
+}
+
 .cloud-button {
     text-align: center;
     background: #ecf0f1;

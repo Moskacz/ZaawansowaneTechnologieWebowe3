@@ -25,6 +25,7 @@ function createSelectOptions() {
     <link rel="stylesheet" type="text/css" href="adminStyle.css">
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="mailComposerScripts.js"></script>
     <script>
         $(function() {
             $('.datepicker').datepicker();
@@ -51,11 +52,11 @@ function createSelectOptions() {
         </select><br/>
 
         <label for="meeting_start">Meeting Start: </label>
-        <input class="datepicker" type="text">
+        <input class="datepicker" type="text" id="date_from">
         <label for="meeting_end">Meeting End: </label>
-        <input class="datepicker" type="text">
+        <input class="datepicker" type="text" id="date_to">
 
-        <input type="submit" class="cloud-button" name="submit" value="Send mail"> <br/>
+        <input type="submit" class="cloud-button" onclick="insertDatesIntoDatabase()" name="submit" value="Send mail"> <br/>
     </form>
 </div>
 </body>

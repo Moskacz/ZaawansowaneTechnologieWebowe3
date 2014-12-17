@@ -171,7 +171,7 @@ function updateResults() {
         resultDiv.removeChild(resultDiv.firstChild);
     }
     var header = document.createElement('h1');
-    var textNode = document.createTextNode("Najlepszy termin na spotkanie to: " + getChartLabels()[bestChoiceTimeIndex]);
+    var textNode = document.createTextNode("Best time for meeting: " + getChartLabels()[bestChoiceTimeIndex]);
     header.appendChild(textNode);
     resultDiv.appendChild(header);
 }

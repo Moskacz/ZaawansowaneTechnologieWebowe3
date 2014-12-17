@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="jquery-min-1.11.1.js"></script>
     <script src="Chart.js"></script>
     <script src="chartScripts.js"></script>
     <script>
@@ -10,7 +10,8 @@
             var chart = document.getElementById("chart");
             var context = chart.getContext("2d");
             window.myLine = new Chart(context).Line(getChartData(), {
-                responsive: false
+                responsive: false,
+                scaleLabel: "<%=  (value >= 100 ? 'Definitely yes' : ( value >= 80 ? 'Good idea' : (value >= 60 ? 'Yes' : (value >= 40 ? 'Maybe' : (value >= 20 ? 'No' : 'Definitely not')))))  %>"
             });
 
             updateResults();

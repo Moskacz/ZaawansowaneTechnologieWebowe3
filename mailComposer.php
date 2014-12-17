@@ -23,7 +23,7 @@ function createSelectOptions() {
     <link rel="stylesheet" type="text/css" href="datepicker/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="datepicker/css/datepicker.css">
     <link rel="stylesheet" type="text/css" href="adminStyle.css">
-    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="jquery-min-1.11.1.js"></script>
     <script src="datepicker/js/bootstrap-datepicker.js"></script>
     <script src="mailComposerScripts.js"></script>
     <script>
